@@ -26,4 +26,7 @@ spec:
             - secretRef:
                 name: sample-app-secret
           resources: {}
+      imagePullSecrets:
+      - name: GHCR_PAT
+          
 status: {}
