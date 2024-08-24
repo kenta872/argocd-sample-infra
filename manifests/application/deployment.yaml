@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sample-app
+  name: sample-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sample-app
+    spec:
+      containers:
+        - image: ghcr.io/kenta872/coding_test_library/sample-app:v0.0.12
+          name: fastapi-sample
+          envFrom:
+            - configMapRef:
+                name: sample-app-configmap
+            - secretRef:
+                name: sample-app-secret
+          resources: {}
+status: {}

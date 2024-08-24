@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: sample-app-configmap
+data:
+  MYSQL_DATABASE: example_db
+  MYSQL_HOST: mysql
+  MYSQL_USER: user
