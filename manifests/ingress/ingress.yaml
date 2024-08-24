@@ -15,4 +15,4 @@ spec:
               service:
                 name: sample-app-service
                 port:
-                  number: 80
+                  number: 8080
